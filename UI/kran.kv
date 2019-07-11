@@ -1,0 +1,65 @@
+#:kivy 1.10.1
+# Define your background color Template
+<BackgroundColor@Widget>
+    background_color: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgba: root.background_color
+        Rectangle:
+            size: self.size
+            pos: self.pos
+# Now you can simply Mix the `BackgroundColor` class with almost
+# any other widget... to give it a background.
+<BackgroundLabel@Label+BackgroundColor>
+    background_color: 0, 0, 0, 0
+    # Default the background color for this label
+    # to r 0, g 0, b 0, a 0
+<KranUI>
+    Button:
+        font_size: 70  
+        font_name: "C:\Windows\Fonts\\arial.ttf"
+        center_x: root.width / 4 - 100
+        center_y: root.height / 2
+        text: "\u25c4"
+        
+    Button:
+        font_size: 70  
+        font_name: "C:\Windows\Fonts\\arial.ttf"
+        center_x: root.width / 4 + 100
+        center_y: root.height / 2
+        text: "\u25ba"
+    Button:
+        font_size: 70  
+        font_name: "C:\Windows\Fonts\\arial.ttf"
+        center_x: root.width / 4
+        center_y: root.height / 2 - 100
+        text: "\u25bc"
+    Button:
+        font_size: 70  
+        font_name: "C:\Windows\Fonts\\arial.ttf"
+        center_x: root.width / 4
+        center_y: root.height / 2 + 100
+        text: "\u25b2"
+    Button:
+        font_size: 70  
+        center_x: root.width / 4
+        center_y: root.height / 2
+        text: "0"
+    TextInput:    
+        font_size: 30
+        width: 120
+        height: 40
+        left: root.width / 2
+    TextInput:    
+        font_size: 30
+        width: 500
+        height: 40
+        right: root.right
+	BackgroundLabel
+        font_size: 30
+        width: 500
+        height: root.height - 40
+        right: root.right
+        text: "o"
+    	background_color: 0.5, 0.5, 0.5, 1
+        
