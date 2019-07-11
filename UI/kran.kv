@@ -14,6 +14,7 @@
     background_color: 0, 0, 0, 0
     # Default the background color for this label
     # to r 0, g 0, b 0, a 0
+    
 <KranUI>
     Button:
         font_size: 70  
@@ -21,6 +22,7 @@
         center_x: root.width / 4 - 100
         center_y: root.height / 2
         text: "\u25c4"
+        on_press: root.step_forward()
         
     Button:
         font_size: 70  
@@ -47,9 +49,15 @@
         text: "0"
     TextInput:    
         font_size: 30
+        width: 180
+        height: 40
+    Button:    
+        font_size: 30
         width: 120
         height: 40
-        left: root.width / 2
+        center_x:  240
+        font_name: "C:\Windows\Fonts\\arial.ttf"
+        text: "\u00D6ffnen"
     TextInput:    
         font_size: 30
         width: 500
@@ -60,6 +68,10 @@
         width: 500
         height: root.height - 40
         right: root.right
+        top: 99
         text: "o"
+    	text_size: self.size
+    	halign: 'left'
+    	valign: 'top'
     	background_color: 0.5, 0.5, 0.5, 1
         

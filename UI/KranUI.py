@@ -7,13 +7,7 @@ import gc
 import kivy
 from kivy.app import App
 from kivy.uix.widget import Widget
-from kivy.uix.relativelayout import RelativeLayout
-from kivy.uix.anchorlayout import AnchorLayout
-from kivy.uix.button import Button
-from kivy.uix.scrollview import ScrollView
-from kivy.effects.scroll import ScrollEffect
 from kivy.core.window import Window
-from kivy.app import runTouchApp
 
 #class Screen(RelativeLayout):
     #def __init__(self, **kwargs):
@@ -39,12 +33,16 @@ from kivy.app import runTouchApp
 #gc.collect()
 #runTouchApp(screen)
 
-class KranUI(Widget):
+class KranUI(Widget):    
+    Window.minimum_width = 1000
+    Window.minimum_height = 650
+    Window.size = (1000, 650)
     pass
 
 
 class KranApp(App):
     def build(self):
+
         return KranUI()
 
 
